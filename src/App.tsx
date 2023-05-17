@@ -140,6 +140,7 @@ const App: React.FC = () => {
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
           {vehicles.map((item) => (
             <Marker
+              key={item.id}
               position={{ lat: item.latitude, lng: item.longitude }}
             ></Marker>
           ))}
